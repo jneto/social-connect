@@ -60,9 +60,6 @@ add_action('query_vars', 'sc_query_vars');
  */
 function sc_parse_request($wp) {
 	if (array_key_exists('social-connect', $wp->query_vars)) {
-		if (!session_id()) {
-			session_start();
-		}
 
 		switch ($wp->query_vars['social-connect']) {
 			case 'twitter':
